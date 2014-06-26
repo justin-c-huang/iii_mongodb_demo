@@ -1,0 +1,32 @@
+mongod --bind_ip 127.0.0.1 --port 27095 --dbpath /Volumes/newSpace/iii_mongodb_demo/rs/rsa --replSet rs-1 --smallfiles --oplogSize 128
+
+mongod --bind_ip 127.0.0.1 --port 27096 --dbpath /Volumes/newSpace/iii_mongodb_demo/rs/rsb --replSet rs-1 --smallfiles --oplogSize 128 
+
+mongod --bind_ip 127.0.0.1 --port 27097 --dbpath /Volumes/newSpace/iii_mongodb_demo/rs/rsc --replSet rs-1 --smallfiles --oplogSize 128 
+
+mongod --bind_ip justin-c-huang.local --port 27098 --dbpath /Volumes/newSpace/iii_mongodb_demo/rs/rsd --replSet rs-1 --smallfiles --oplogSize 128
+
+
+
+MongoDB shell version: 2.0.4
+connecting to: 127.0.0.1:27095/test
+> rs.initiate()
+{
+	"info2" : "no configuration explicitly specified -- making one",
+	"me" : "justin-c-huang.local:27095",
+	"info" : "Config now saved locally.  Should come online in about a minute.",
+	"ok" : 1
+}
+> rs.add('127.0.0.1:27096')
+{
+	"assertion" : "can't use localhost in repl set member names except when using it for all members",
+	"assertionCode" : 13393,
+	"errmsg" : "db assertion failure",
+	"ok" : 0
+}
+PRIMARY> rs.add('justin-c-huang.local:27096')
+{ "ok" : 1 }
+PRIMARY> rs.add('justin-c-huang.local:27097')
+{ "ok" : 1 }
+
+

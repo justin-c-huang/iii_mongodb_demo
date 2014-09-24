@@ -1,0 +1,31 @@
+db.webs.drop();
+var showCursorItems = function(cursor){
+	while (cursor.hasNext()) {
+   		printjson(cursor.next());
+	}
+}
+
+var web1 = {url: 'www.example.com', pageviews: 52}
+//var web2 = {url: 'www.example.com', pageviews: 102}
+
+db.webs.insert(web1);
+//db.webs.insert(web2);
+
+
+print('::: webs:')
+var cursor = db.webs.find();
+showCursorItems(cursor);
+
+db.webs.update({url:'www.example.com'},{$inc:{pageviews:1}});
+//db.webs.update({},{$inc:{pageviews:1}},false,true);
+print('::: pageviews + 1 => webs:')
+var cursor = db.webs.find();
+showCursorItems(cursor);
+
+db.webs.update({url:'www.example.com'},{$inc:{pageviews:7}});
+//db.webs.update({},{$inc:{pageviews:7}});
+print('::: pageviews + 7 => webs:')
+var cursor = db.webs.find();
+showCursorItems(cursor);
+
+

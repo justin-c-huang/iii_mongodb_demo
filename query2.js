@@ -5,7 +5,7 @@ var showCursorItems = function(cursor){
 	}
 }
 
-var db = db.getSisterDB("iii");
+//var db = db.getSisterDB("iii2");
 
 db.inventory.drop();
 
@@ -29,17 +29,6 @@ db.inventory.insert([
 	productH
 ]);
 
-cursor = db.inventory.find({
-	                         level:{
-	                         	     $in:[null],
-	                         	     $exists:true
-	                         	   }
-	                       },
-	                       {_id:0}
-);
-showCursorItems(cursor);
-
-/*
 cursor = db.inventory.find( {$or:[
 	                             {quantity:10},
                                  {price:10}
@@ -47,10 +36,10 @@ cursor = db.inventory.find( {$or:[
 	                        },
 	                        {_id:0}
 );
-*/
-//showCursorItems(cursor);
 
-/*
+showCursorItems(cursor);
+print('-------------------------------------------')
+
 cursor = db.inventory.find( {
 	                          price:{
 	                          	      $not:{
@@ -61,7 +50,26 @@ cursor = db.inventory.find( {
 	                        {_id:0}
 );
 showCursorItems(cursor);
-*/
+
+print('-------------------------------------------')
+cursor = db.inventory.find({level:null},{_id:0});
+showCursorItems(cursor);
+
+print('-------------------------------------------')
+cursor = db.inventory.find({
+	                         level:{
+	                         	     $in:[null],
+	                         	     $exists:true
+	                         	   }
+	                       },
+	                       {_id:0}
+);
+showCursorItems(cursor);
+
+
+
+
+
 
 
 //cursor = db.inventory.find({},{_id:0});

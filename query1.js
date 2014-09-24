@@ -5,7 +5,7 @@ var showCursorItems = function(cursor){
 	}
 }
 
-var db = db.getSisterDB("iii");
+var db = db.getSisterDB("iii2");
 
 db.users_for_test.drop();
 

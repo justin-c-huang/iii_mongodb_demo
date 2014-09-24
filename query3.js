@@ -5,7 +5,7 @@ var showCursorItems = function(cursor){
 	}
 }
 
-var db = db.getSisterDB("iii");
+var db = db.getSisterDB("iii2");
 
 db.food.drop();
 
@@ -19,28 +19,11 @@ cursor.forEach(function(x){
 	printjson(x.fruit);
 });
 
-
-//cursor = db.food.find({'fruit.2':'orange'},{"fruit.$":1});
-//showCursorItems(cursor);
-
-
-//cursor = db.food.find({},{fruit:{$slice:[2,1]},_id:0});
-//showCursorItems(cursor);
-
-//cursor = db.food.find({},{fruit:{$slice:-1},_id:0});
-//showCursorItems(cursor);
-
-
-//cursor = db.food.find({},{fruit:{$slice:1}});
-//showCursorItems(cursor);
-
-//cursor = db.food.find({fruit:{$size:2}});
+//cursor = db.food.find({fruit:'banana'});
 //showCursorItems(cursor);
 
 //cursor = db.food.find({'fruit.2':'orange'});
 //showCursorItems(cursor);
-
-
 
 /*
 cursor = db.food.find({
@@ -52,6 +35,33 @@ cursor = db.food.find({
 
 showCursorItems(cursor);*/
 
-
-//cursor = db.food.find({fruit:'banana'});
+//cursor = db.food.find({fruit:{$size:2}});
 //showCursorItems(cursor);
+
+cursor = db.food.find({},{fruit:{$slice:1}});
+showCursorItems(cursor);
+
+
+//cursor = db.food.find({'fruit.2':'orange'},{"fruit.$":1});
+//showCursorItems(cursor);
+
+
+//cursor = db.food.find({},{fruit:{$slice:[0,1]},_id:0});
+//showCursorItems(cursor);
+
+//cursor = db.food.find({},{fruit:{$slice:-1},_id:0});
+//showCursorItems(cursor);
+
+
+//cursor = db.food.find({},{fruit:{$slice:1}});
+//showCursorItems(cursor);
+
+
+//cursor = db.food.find({'fruit.2':'orange'});
+//showCursorItems(cursor);
+
+
+
+
+
+

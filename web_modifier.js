@@ -6,10 +6,10 @@ var showCursorItems = function(cursor){
 }
 
 var web1 = {url: 'www.example.com', pageviews: 52}
-//var web2 = {url: 'www.example.com', pageviews: 102}
+var web2 = {url: 'www.example.com', pageviews: 102}
 
 db.webs.insert(web1);
-//db.webs.insert(web2);
+db.webs.insert(web2);
 
 
 print('::: webs:')
@@ -23,7 +23,7 @@ var cursor = db.webs.find();
 showCursorItems(cursor);
 
 db.webs.update({url:'www.example.com'},{$inc:{pageviews:7}});
-//db.webs.update({},{$inc:{pageviews:7}});
+//db.webs.update({},{$inc:{pageviews:7}},{upsert:false,multi:true});
 print('::: pageviews + 7 => webs:')
 var cursor = db.webs.find();
 showCursorItems(cursor);

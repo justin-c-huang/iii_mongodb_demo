@@ -1,5 +1,5 @@
 
-var db = db.getSisterDB("iii");
+var db = db.getSisterDB("iii2");
 
 var showCursorItems = function(cursor){
 	while (cursor.hasNext()) {
@@ -17,7 +17,7 @@ var findOneAndShow = function(coll_name){
 	printjson(db[coll_name].findOne());
 }
 
-findOneAndShow('users');
+//findOneAndShow('users');
 
 print('--------------------------');
 /*
@@ -38,7 +38,7 @@ var cursor = db.users.aggregate(
 );
 */
 
-var cursor = db.users.aggregate(
+var cursor = db.usersIndex.aggregate(
 				{
 					$group:{_id:'$age', count : { $sum : 1 }}
 				},

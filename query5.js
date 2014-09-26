@@ -5,7 +5,7 @@ var showCursorItems = function(cursor){
 	}
 }
 
-var db = db.getSisterDB("iii");
+var db = db.getSisterDB("iii2");
 
 db.test.drop();
 
@@ -18,7 +18,8 @@ user.name = 'Hopper'; user.age = 12; db.test.insert(user);
 user.name = 'James'; user.age = 51; db.test.insert(user);
 user.name = 'Lisa'; user.age = 65; db.test.insert(user);
 
-var cursor = db.test.find().limit(3).sort({age:1});
+var cursor = db.test.find().skip(5);
+//var cursor = db.test.find().limit(3).sort({age:1});
 showCursorItems(cursor);
 
 

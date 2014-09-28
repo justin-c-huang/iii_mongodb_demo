@@ -1,0 +1,170 @@
+2014-09-28T18:10:32.427+0800 [initandlisten] MongoDB starting : pid=19569 port=27017 dbpath=/data/db 64-bit host=justin-c-huang.local
+2014-09-28T18:10:32.427+0800 [initandlisten] 
+2014-09-28T18:10:32.428+0800 [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2014-09-28T18:10:32.428+0800 [initandlisten] db version v2.6.1
+2014-09-28T18:10:32.429+0800 [initandlisten] git version: 4b95b086d2374bdcfcdf2249272fb552c9c726e8
+2014-09-28T18:10:32.429+0800 [initandlisten] build info: Darwin mci-osx108-6.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2014-09-28T18:10:32.429+0800 [initandlisten] allocator: system
+2014-09-28T18:10:32.439+0800 [initandlisten] options: { config: "/Volumes/newSpace/iii_mongodb_demo/iii_config.cfg", net: { bindIp: "127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Volumes/newSpace/iii_mongodb_demo/iii_mongodb.log", quiet: true } }
+2014-09-28T18:10:32.465+0800 [initandlisten] journal dir=/data/db/journal
+2014-09-28T18:10:32.466+0800 [initandlisten] recover : no journal files present, no recovery needed
+2014-09-28T18:10:32.502+0800 [FileAllocator] allocating new datafile /data/db/local.ns, filling with zeroes...
+2014-09-28T18:10:32.502+0800 [FileAllocator] creating directory /data/db/_tmp
+2014-09-28T18:10:32.546+0800 [FileAllocator] done allocating datafile /data/db/local.ns, size: 16MB,  took 0.043 secs
+2014-09-28T18:10:32.774+0800 [FileAllocator] allocating new datafile /data/db/local.0, filling with zeroes...
+2014-09-28T18:10:33.414+0800 [FileAllocator] done allocating datafile /data/db/local.0, size: 64MB,  took 0.64 secs
+2014-09-28T18:10:33.670+0800 [initandlisten] build index on: local.startup_log properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }
+2014-09-28T18:10:33.679+0800 [initandlisten] 	 added index to empty collection
+2014-09-28T18:10:33.680+0800 [initandlisten] command local.$cmd command: create { create: "startup_log", size: 10485760, capped: true } ntoreturn:1 keyUpdates:0 numYields:0  reslen:37 1178ms
+2014-09-28T18:10:33.681+0800 [initandlisten] waiting for connections on port 27017
+2014-09-28T18:11:21.371+0800 [conn1] terminating, shutdown command received
+2014-09-28T18:11:21.371+0800 [conn1] dbexit: shutdown called
+2014-09-28T18:11:21.372+0800 [conn1] shutdown: going to close listening sockets...
+2014-09-28T18:11:21.372+0800 [conn1] closing listening socket: 8
+2014-09-28T18:11:21.372+0800 [conn1] closing listening socket: 9
+2014-09-28T18:11:21.373+0800 [conn1] removing socket file: /tmp/mongodb-27017.sock
+2014-09-28T18:11:21.374+0800 [conn1] shutdown: going to flush diaglog...
+2014-09-28T18:11:21.374+0800 [conn1] shutdown: going to close sockets...
+2014-09-28T18:11:21.375+0800 [conn1] shutdown: waiting for fs preallocator...
+2014-09-28T18:11:21.375+0800 [conn1] shutdown: lock for final commit...
+2014-09-28T18:11:21.376+0800 [conn1] shutdown: final commit...
+2014-09-28T18:11:21.381+0800 [conn1] shutdown: closing all files...
+2014-09-28T18:11:21.381+0800 [conn1] closeAllFiles() finished
+2014-09-28T18:11:21.382+0800 [conn1] journalCleanup...
+2014-09-28T18:11:21.382+0800 [conn1] removeJournalFiles
+2014-09-28T18:11:21.382+0800 [conn1] shutdown: removing fs lock...
+2014-09-28T18:11:21.383+0800 [conn1] dbexit: really exiting now
+2014-09-28T18:14:59.941+0800 ***** SERVER RESTARTED *****
+2014-09-28T18:14:59.971+0800 [initandlisten] MongoDB starting : pid=19617 port=27017 dbpath=/Volumes/newSpace/iii_mongodb_demo/iii_db 64-bit host=justin-c-huang.local
+2014-09-28T18:14:59.973+0800 [initandlisten] 
+2014-09-28T18:14:59.973+0800 [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2014-09-28T18:14:59.974+0800 [initandlisten] db version v2.6.1
+2014-09-28T18:14:59.974+0800 [initandlisten] git version: 4b95b086d2374bdcfcdf2249272fb552c9c726e8
+2014-09-28T18:14:59.974+0800 [initandlisten] build info: Darwin mci-osx108-6.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2014-09-28T18:14:59.974+0800 [initandlisten] allocator: system
+2014-09-28T18:14:59.974+0800 [initandlisten] options: { config: "/Volumes/newSpace/iii_mongodb_demo/iii_config.cfg", net: { bindIp: "127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "/Volumes/newSpace/iii_mongodb_demo/iii_db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Volumes/newSpace/iii_mongodb_demo/iii_mongodb.log", quiet: true } }
+2014-09-28T18:15:00.016+0800 [initandlisten] journal dir=/Volumes/newSpace/iii_mongodb_demo/iii_db/journal
+2014-09-28T18:15:00.018+0800 [initandlisten] recover : no journal files present, no recovery needed
+2014-09-28T18:15:03.417+0800 [initandlisten] waiting for connections on port 27017
+2014-09-28T18:17:10.402+0800 [conn2] terminating, shutdown command received
+2014-09-28T18:17:10.403+0800 [conn2] dbexit: shutdown called
+2014-09-28T18:17:10.403+0800 [conn2] shutdown: going to close listening sockets...
+2014-09-28T18:17:10.404+0800 [conn2] closing listening socket: 9
+2014-09-28T18:17:10.405+0800 [conn2] closing listening socket: 10
+2014-09-28T18:17:10.405+0800 [conn2] removing socket file: /tmp/mongodb-27017.sock
+2014-09-28T18:17:10.406+0800 [conn2] shutdown: going to flush diaglog...
+2014-09-28T18:17:10.406+0800 [conn2] shutdown: going to close sockets...
+2014-09-28T18:17:10.407+0800 [conn2] shutdown: waiting for fs preallocator...
+2014-09-28T18:17:10.407+0800 [conn2] shutdown: lock for final commit...
+2014-09-28T18:17:10.408+0800 [conn2] shutdown: final commit...
+2014-09-28T18:17:10.422+0800 [conn2] shutdown: closing all files...
+2014-09-28T18:17:10.424+0800 [conn2] closeAllFiles() finished
+2014-09-28T18:17:10.424+0800 [conn2] journalCleanup...
+2014-09-28T18:17:10.425+0800 [conn2] removeJournalFiles
+2014-09-28T18:17:10.425+0800 [conn2] shutdown: removing fs lock...
+2014-09-28T18:17:10.426+0800 [conn2] dbexit: really exiting now
+2014-09-28T18:18:20.256+0800 ***** SERVER RESTARTED *****
+2014-09-28T18:18:20.263+0800 [initandlisten] MongoDB starting : pid=19689 port=27017 dbpath=/Volumes/newSpace/iii_mongodb_demo/iii_db 64-bit host=justin-c-huang.local
+2014-09-28T18:18:20.263+0800 [initandlisten] 
+2014-09-28T18:18:20.264+0800 [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2014-09-28T18:18:20.264+0800 [initandlisten] db version v2.6.1
+2014-09-28T18:18:20.264+0800 [initandlisten] git version: 4b95b086d2374bdcfcdf2249272fb552c9c726e8
+2014-09-28T18:18:20.264+0800 [initandlisten] build info: Darwin mci-osx108-6.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2014-09-28T18:18:20.264+0800 [initandlisten] allocator: system
+2014-09-28T18:18:20.265+0800 [initandlisten] options: { config: "/Volumes/newSpace/iii_mongodb_demo/iii_config.cfg", net: { bindIp: "127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "/Volumes/newSpace/iii_mongodb_demo/iii_db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Volumes/newSpace/iii_mongodb_demo/iii_mongodb.log", quiet: true } }
+2014-09-28T18:18:20.266+0800 [initandlisten] journal dir=/Volumes/newSpace/iii_mongodb_demo/iii_db/journal
+2014-09-28T18:18:20.266+0800 [initandlisten] recover : no journal files present, no recovery needed
+2014-09-28T18:18:20.372+0800 [initandlisten] waiting for connections on port 27017
+2014-09-28T18:19:42.654+0800 [conn1] terminating, shutdown command received
+2014-09-28T18:19:42.655+0800 [conn1] dbexit: shutdown called
+2014-09-28T18:19:42.655+0800 [conn1] shutdown: going to close listening sockets...
+2014-09-28T18:19:42.656+0800 [conn1] closing listening socket: 8
+2014-09-28T18:19:42.657+0800 [conn1] closing listening socket: 9
+2014-09-28T18:19:42.657+0800 [conn1] removing socket file: /tmp/mongodb-27017.sock
+2014-09-28T18:19:42.658+0800 [conn1] shutdown: going to flush diaglog...
+2014-09-28T18:19:42.659+0800 [conn1] shutdown: going to close sockets...
+2014-09-28T18:19:42.659+0800 [conn1] shutdown: waiting for fs preallocator...
+2014-09-28T18:19:42.660+0800 [conn1] shutdown: lock for final commit...
+2014-09-28T18:19:42.660+0800 [conn1] shutdown: final commit...
+2014-09-28T18:19:42.678+0800 [conn1] shutdown: closing all files...
+2014-09-28T18:19:42.680+0800 [conn1] closeAllFiles() finished
+2014-09-28T18:19:42.680+0800 [conn1] journalCleanup...
+2014-09-28T18:19:42.680+0800 [conn1] removeJournalFiles
+2014-09-28T18:19:42.680+0800 [conn1] shutdown: removing fs lock...
+2014-09-28T18:19:42.681+0800 [conn1] dbexit: really exiting now
+2014-09-28T18:20:05.690+0800 ***** SERVER RESTARTED *****
+2014-09-28T18:20:05.696+0800 [initandlisten] MongoDB starting : pid=19726 port=27017 dbpath=/Volumes/newSpace/iii_mongodb_demo/iii_db 64-bit host=justin-c-huang.local
+2014-09-28T18:20:05.696+0800 [initandlisten] 
+2014-09-28T18:20:05.697+0800 [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2014-09-28T18:20:05.697+0800 [initandlisten] db version v2.6.1
+2014-09-28T18:20:05.697+0800 [initandlisten] git version: 4b95b086d2374bdcfcdf2249272fb552c9c726e8
+2014-09-28T18:20:05.697+0800 [initandlisten] build info: Darwin mci-osx108-6.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2014-09-28T18:20:05.698+0800 [initandlisten] allocator: system
+2014-09-28T18:20:05.698+0800 [initandlisten] options: { config: "/Volumes/newSpace/iii_mongodb_demo/iii_config.cfg", net: { bindIp: "127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "/Volumes/newSpace/iii_mongodb_demo/iii_db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Volumes/newSpace/iii_mongodb_demo/iii_mongodb.log", quiet: true } }
+2014-09-28T18:20:05.699+0800 [initandlisten] journal dir=/Volumes/newSpace/iii_mongodb_demo/iii_db/journal
+2014-09-28T18:20:05.700+0800 [initandlisten] recover : no journal files present, no recovery needed
+2014-09-28T18:20:05.798+0800 [initandlisten] waiting for connections on port 27017
+2014-09-28T18:21:25.691+0800 [conn1] terminating, shutdown command received
+2014-09-28T18:21:25.692+0800 [conn1] dbexit: shutdown called
+2014-09-28T18:21:25.692+0800 [conn1] shutdown: going to close listening sockets...
+2014-09-28T18:21:25.693+0800 [conn1] closing listening socket: 8
+2014-09-28T18:21:25.693+0800 [conn1] closing listening socket: 10
+2014-09-28T18:21:25.694+0800 [conn1] removing socket file: /tmp/mongodb-27017.sock
+2014-09-28T18:21:25.694+0800 [conn1] shutdown: going to flush diaglog...
+2014-09-28T18:21:25.695+0800 [conn1] shutdown: going to close sockets...
+2014-09-28T18:21:25.695+0800 [conn1] shutdown: waiting for fs preallocator...
+2014-09-28T18:21:25.696+0800 [conn1] shutdown: lock for final commit...
+2014-09-28T18:21:25.696+0800 [conn1] shutdown: final commit...
+2014-09-28T18:21:25.712+0800 [conn1] shutdown: closing all files...
+2014-09-28T18:21:25.714+0800 [conn1] closeAllFiles() finished
+2014-09-28T18:21:25.714+0800 [conn1] journalCleanup...
+2014-09-28T18:21:25.715+0800 [conn1] removeJournalFiles
+2014-09-28T18:21:25.715+0800 [conn1] shutdown: removing fs lock...
+2014-09-28T18:21:25.715+0800 [conn1] dbexit: really exiting now
+2014-09-28T18:23:36.846+0800 ***** SERVER RESTARTED *****
+2014-09-28T18:23:36.854+0800 [initandlisten] MongoDB starting : pid=19745 port=27017 dbpath=/Volumes/newSpace/iii_mongodb_demo/iii_db 64-bit host=justin-c-huang.local
+2014-09-28T18:23:36.854+0800 [initandlisten] 
+2014-09-28T18:23:36.854+0800 [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2014-09-28T18:23:36.855+0800 [initandlisten] db version v2.6.1
+2014-09-28T18:23:36.855+0800 [initandlisten] git version: 4b95b086d2374bdcfcdf2249272fb552c9c726e8
+2014-09-28T18:23:36.855+0800 [initandlisten] build info: Darwin mci-osx108-6.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2014-09-28T18:23:36.855+0800 [initandlisten] allocator: system
+2014-09-28T18:23:36.856+0800 [initandlisten] options: { config: "/Volumes/newSpace/iii_mongodb_demo/iii_config.cfg", net: { bindIp: "127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "/Volumes/newSpace/iii_mongodb_demo/iii_db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Volumes/newSpace/iii_mongodb_demo/iii_mongodb.log", quiet: true } }
+2014-09-28T18:23:36.857+0800 [initandlisten] journal dir=/Volumes/newSpace/iii_mongodb_demo/iii_db/journal
+2014-09-28T18:23:36.857+0800 [initandlisten] recover : no journal files present, no recovery needed
+2014-09-28T18:23:36.956+0800 [initandlisten] waiting for connections on port 27017
+2014-09-28T18:24:41.967+0800 [conn1] terminating, shutdown command received
+2014-09-28T18:24:41.967+0800 [conn1] dbexit: shutdown called
+2014-09-28T18:24:41.968+0800 [conn1] shutdown: going to close listening sockets...
+2014-09-28T18:24:41.968+0800 [conn1] closing listening socket: 9
+2014-09-28T18:24:41.969+0800 [conn1] closing listening socket: 10
+2014-09-28T18:24:41.969+0800 [conn1] removing socket file: /tmp/mongodb-27017.sock
+2014-09-28T18:24:41.970+0800 [conn1] shutdown: going to flush diaglog...
+2014-09-28T18:24:41.970+0800 [conn1] shutdown: going to close sockets...
+2014-09-28T18:24:41.971+0800 [conn1] shutdown: waiting for fs preallocator...
+2014-09-28T18:24:41.971+0800 [conn1] shutdown: lock for final commit...
+2014-09-28T18:24:41.972+0800 [conn1] shutdown: final commit...
+2014-09-28T18:24:41.992+0800 [conn1] shutdown: closing all files...
+2014-09-28T18:24:41.995+0800 [conn1] closeAllFiles() finished
+2014-09-28T18:24:41.995+0800 [conn1] journalCleanup...
+2014-09-28T18:24:41.996+0800 [conn1] removeJournalFiles
+2014-09-28T18:24:41.997+0800 [conn1] shutdown: removing fs lock...
+2014-09-28T18:24:41.997+0800 [conn1] dbexit: really exiting now
+2014-09-28T19:03:50.913+0800 ***** SERVER RESTARTED *****
+2014-09-28T19:03:50.920+0800 [initandlisten] MongoDB starting : pid=20408 port=27017 dbpath=/Volumes/newSpace/iii_mongodb_demo/iii_db 64-bit host=justin-c-huang.local
+2014-09-28T19:03:50.920+0800 [initandlisten] 
+2014-09-28T19:03:50.921+0800 [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2014-09-28T19:03:50.921+0800 [initandlisten] db version v2.6.1
+2014-09-28T19:03:50.921+0800 [initandlisten] git version: 4b95b086d2374bdcfcdf2249272fb552c9c726e8
+2014-09-28T19:03:50.921+0800 [initandlisten] build info: Darwin mci-osx108-6.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2014-09-28T19:03:50.921+0800 [initandlisten] allocator: system
+2014-09-28T19:03:50.922+0800 [initandlisten] options: { config: "/Volumes/newSpace/iii_mongodb_demo/iii_config.cfg", net: { bindIp: "127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "/Volumes/newSpace/iii_mongodb_demo/iii_db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Volumes/newSpace/iii_mongodb_demo/iii_mongodb.log", quiet: true } }
+2014-09-28T19:03:50.923+0800 [initandlisten] journal dir=/Volumes/newSpace/iii_mongodb_demo/iii_db/journal
+2014-09-28T19:03:50.923+0800 [initandlisten] recover : no journal files present, no recovery needed
+2014-09-28T19:03:51.445+0800 [initandlisten] waiting for connections on port 27017
+2014-09-28T19:34:46.592+0800 [conn19] build index on: iii2.node_users properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.node_users" }
+2014-09-28T19:34:46.595+0800 [conn19] 	 added index to empty collection
+2014-09-28T20:17:15.534+0800 [conn38] build index on: iii2.stores properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.stores" }
+2014-09-28T20:17:15.536+0800 [conn38] 	 added index to empty collection
+2014-09-28T20:17:58.602+0800 [conn43] build index on: iii2.node_stores properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.node_stores" }
+2014-09-28T20:17:58.603+0800 [conn43] 	 added index to empty collection

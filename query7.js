@@ -74,12 +74,12 @@ print('use username_age index spend:'+explainObj2.millis+'ms');
 */
 
 
-var explainObj = db.usersIndex.find({})
-	.limit(100000)
-	.sort({age:1,username: 1})
-	.explain();
+// var explainObj = db.usersIndex.find({})
+// 	.limit(100000)
+// 	.sort({age:1,username: 1})
+// 	.explain();
 
-printjson(explainObj);
+// printjson(explainObj);
 
 
 //var explainObj = db.users.find({username:'user101'}).limit(1).explain();

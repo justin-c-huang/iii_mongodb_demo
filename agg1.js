@@ -17,26 +17,29 @@ var findOneAndShow = function(coll_name){
 	printjson(db[coll_name].findOne());
 }
 
-//findOneAndShow('users');
+//findOneAndShow('usersIndex');
 
 print('--------------------------');
-/*
-var cursor = db.users.aggregate(
-		{$match:{age:15}},
-        {$project:{'NAME':'$username',age:1}},
-        {$limit:5}
-);*/
-/*
-var cursor = db.users.aggregate(
-		{$match:{age:15}},
-        {$project:{
-        	       'NAME':'$username',
-                   'add100Years':{$add:['$age',100]}
-                   }
-        },
-        {$limit:5}
-);
-*/
+
+// var cursor = db.usersIndex.aggregate(
+// 		{$match:{age:15}},
+//         {$project:{'NAME':'$username',age:1}},
+//         {$limit:5}
+// )
+// showCursorItems(cursor);
+
+
+// var cursor = db.usersIndex.aggregate(
+// 		{$match:{age:15}},
+//         {$project:{
+//         	       'NAME':'$username',
+//                    'add100Years':{$add:['$age',100]}
+//                    }
+//         },
+//         {$limit:5}
+// );
+// showCursorItems(cursor);
+
 
 var cursor = db.usersIndex.aggregate(
 				{

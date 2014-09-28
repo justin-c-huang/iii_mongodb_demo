@@ -1,5 +1,5 @@
 
-var db = db.getSisterDB("iii");
+var db = db.getSisterDB("iii2");
 
 var showCursorItems = function(cursor){
 	while (cursor.hasNext()) {
@@ -42,7 +42,7 @@ var reduce = function(key,emits){
 	return {count:total};
 }
 
-//var mrResult = db.runCommand({'mapreduce':'mr1','map':map,'reduce':reduce,"out":{inline:1}});
-var mrResult = db.mr1.mapReduce(map,reduce,{out:'AAA'});  
-findAllAndShow('AAA');
-//printjson(mrResult.results)
+var mrResult = db.runCommand({'mapreduce':'mr1','map':map,'reduce':reduce,"out":{inline:1}});
+//var mrResult = db.mr1.mapReduce(map,reduce,{out:'AAA'});  
+//findAllAndShow('AAA');
+printjson(mrResult.results)

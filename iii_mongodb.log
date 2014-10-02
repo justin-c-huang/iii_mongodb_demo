@@ -168,3 +168,92 @@
 2014-09-28T20:17:15.536+0800 [conn38] 	 added index to empty collection
 2014-09-28T20:17:58.602+0800 [conn43] build index on: iii2.node_stores properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.node_stores" }
 2014-09-28T20:17:58.603+0800 [conn43] 	 added index to empty collection
+2014-09-29T02:15:23.125+0800 [DataFileSync] flushing mmaps took 5184700ms  for 15 files
+2014-09-29T04:03:33.048+0800 [DataFileSync] flushing mmaps took 6389118ms  for 15 files
+2014-09-29T05:51:43.091+0800 [DataFileSync] flushing mmaps took 6389320ms  for 15 files
+2014-09-29T06:37:20.116+0800 [DataFileSync] flushing mmaps took 2636631ms  for 15 files
+2014-09-29T09:39:17.100+0800 [DataFileSync] flushing mmaps took 3037016ms  for 15 files
+2014-09-29T10:10:17.106+0800 [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 42ms
+2014-09-29T10:10:17.425+0800 [TTLMonitor] query admin.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: EOF ntoreturn:0 ntoskip:0 nscanned:0 nscannedObjects:0 keyUpdates:0 numYields:0 locks(micros) r:159117 nreturned:0 reslen:20 114ms
+2014-09-29T14:51:48.916+0800 [conn85] build index on: iii.iii_cats properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii.iii_cats" }
+2014-09-29T14:51:48.952+0800 [conn85] 	 added index to empty collection
+2014-09-29T14:51:48.989+0800 [conn85] insert iii.iii_cats query: { name: "Zildjian", _id: ObjectId('5429018462da02495fb42630'), __v: 0 } ninserted:1 keyUpdates:0 numYields:0 locks(micros) w:230891 230ms
+2014-09-29T14:51:48.991+0800 [conn85] command iii.$cmd command: insert { insert: "iii_cats", writeConcern: { w: 1 }, ordered: true, documents: [ { name: "Zildjian", _id: ObjectId('5429018462da02495fb42630'), __v: 0 } ] } keyUpdates:0 numYields:0 locks(micros) w:568 reslen:40 280ms
+2014-09-29T14:56:15.915+0800 [conn97] build index on: iii2.iii2_cats properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.iii2_cats" }
+2014-09-29T14:56:15.915+0800 [conn97] 	 added index to empty collection
+2014-09-29T14:56:15.916+0800 [conn97] insert iii2.iii2_cats query: { name: "小咪", _id: ObjectId('5429028fd1161d9c5f7c0a79'), __v: 0 } ninserted:1 keyUpdates:0 numYields:0 locks(micros) w:357476 357ms
+2014-09-29T14:56:15.916+0800 [conn97] command iii2.$cmd command: insert { insert: "iii2_cats", writeConcern: { w: 1 }, ordered: true, documents: [ { name: "小咪", _id: ObjectId('5429028fd1161d9c5f7c0a79'), __v: 0 } ] } keyUpdates:0 numYields:0 locks(micros) w:221 reslen:40 357ms
+2014-09-29T15:38:12.689+0800 [conn118] build index on: iii2.kittens properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.kittens" }
+2014-09-29T15:38:12.712+0800 [conn118] 	 added index to empty collection
+2014-09-29T15:42:33.517+0800 [conn100] command iii2.$cmd command: drop { drop: "kittens" } keyUpdates:0 numYields:0 locks(micros) w:120785 reslen:75 120ms
+2014-09-29T15:42:50.623+0800 [conn100] command iii2.$cmd command: drop { drop: "iii2_cats" } keyUpdates:0 numYields:0 locks(micros) w:132657 reslen:77 132ms
+2014-09-29T20:08:44.838+0800 [DataFileSync] flushing mmaps took 5698853ms  for 15 files
+2014-09-30T09:52:34.068+0800 [DataFileSync] flushing mmaps took 36166383ms  for 15 files
+2014-09-30T09:52:38.073+0800 [TTLMonitor] query admin.system.indexes query: { expireAfterSeconds: { $exists: true } } planSummary: EOF ntoreturn:0 ntoskip:0 keyUpdates:0 numYields:0 locks(micros) r:36166334810 nreturned:0 reslen:20 36166334ms
+2014-09-30T20:11:20.650+0800 [DataFileSync] flushing mmaps took 4482820ms  for 15 files
+2014-10-02T11:07:22.274+0800 ***** SERVER RESTARTED *****
+2014-10-02T11:07:22.424+0800 [initandlisten] MongoDB starting : pid=6185 port=27017 dbpath=/Volumes/newSpace/iii_mongodb_demo/iii_db 64-bit host=justin-c-huang.local
+2014-10-02T11:07:22.426+0800 [initandlisten] 
+2014-10-02T11:07:22.427+0800 [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2014-10-02T11:07:22.427+0800 [initandlisten] db version v2.6.1
+2014-10-02T11:07:22.428+0800 [initandlisten] git version: 4b95b086d2374bdcfcdf2249272fb552c9c726e8
+2014-10-02T11:07:22.428+0800 [initandlisten] build info: Darwin mci-osx108-6.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2014-10-02T11:07:22.429+0800 [initandlisten] allocator: system
+2014-10-02T11:07:22.429+0800 [initandlisten] options: { config: "./iii_config.cfg", net: { bindIp: "127.0.0.1", port: 27017 }, processManagement: { fork: true }, storage: { dbPath: "/Volumes/newSpace/iii_mongodb_demo/iii_db", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/Volumes/newSpace/iii_mongodb_demo/iii_mongodb.log", quiet: true } }
+2014-10-02T11:07:22.504+0800 [initandlisten] journal dir=/Volumes/newSpace/iii_mongodb_demo/iii_db/journal
+2014-10-02T11:07:22.505+0800 [initandlisten] recover begin
+2014-10-02T11:07:22.520+0800 [initandlisten] recover lsn: 45345705
+2014-10-02T11:07:22.520+0800 [initandlisten] recover /Volumes/newSpace/iii_mongodb_demo/iii_db/journal/j._0
+2014-10-02T11:07:22.538+0800 [initandlisten] recover skipping application of section seq:0 < lsn:45345705
+2014-10-02T11:07:22.539+0800 [initandlisten] recover skipping application of section seq:1660686 < lsn:45345705
+2014-10-02T11:07:22.540+0800 [initandlisten] recover skipping application of section seq:2104841 < lsn:45345705
+2014-10-02T11:07:22.540+0800 [initandlisten] recover skipping application of section seq:2216016 < lsn:45345705
+2014-10-02T11:07:22.540+0800 [initandlisten] recover skipping application of section seq:4043586 < lsn:45345705
+2014-10-02T11:07:22.541+0800 [initandlisten] recover skipping application of section seq:4099041 < lsn:45345705
+2014-10-02T11:07:22.542+0800 [initandlisten] recover skipping application of section seq:12815856 < lsn:45345705
+2014-10-02T11:07:22.542+0800 [initandlisten] recover skipping application of section seq:12871351 < lsn:45345705
+2014-10-02T11:07:22.552+0800 [initandlisten] recover skipping application of section seq:12926816 < lsn:45345705
+2014-10-02T11:07:22.552+0800 [initandlisten] recover skipping application of section more...
+2014-10-02T11:07:23.446+0800 [initandlisten] recover cleaning up
+2014-10-02T11:07:23.446+0800 [initandlisten] removeJournalFiles
+2014-10-02T11:07:23.456+0800 [initandlisten] recover done
+2014-10-02T11:07:26.154+0800 [initandlisten] waiting for connections on port 27017
+2014-10-02T11:08:10.946+0800 [FileAllocator] allocating new datafile /Volumes/newSpace/iii_mongodb_demo/iii_db/test2.ns, filling with zeroes...
+2014-10-02T11:08:10.946+0800 [FileAllocator] creating directory /Volumes/newSpace/iii_mongodb_demo/iii_db/_tmp
+2014-10-02T11:08:11.021+0800 [FileAllocator] done allocating datafile /Volumes/newSpace/iii_mongodb_demo/iii_db/test2.ns, size: 16MB,  took 0.073 secs
+2014-10-02T11:08:11.340+0800 [FileAllocator] allocating new datafile /Volumes/newSpace/iii_mongodb_demo/iii_db/test2.0, filling with zeroes...
+2014-10-02T11:08:11.979+0800 [FileAllocator] done allocating datafile /Volumes/newSpace/iii_mongodb_demo/iii_db/test2.0, size: 64MB,  took 0.638 secs
+2014-10-02T11:08:12.238+0800 [conn1] build index on: test2.test_coll properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "test2.test_coll" }
+2014-10-02T11:08:12.243+0800 [conn1] 	 added index to empty collection
+2014-10-02T11:08:12.243+0800 [conn1] insert test2.test_coll query: { _id: ObjectId('542cc19a8b4684aaa07a0f28'), a: "hello" } ninserted:1 keyUpdates:0 numYields:0 locks(micros) w:1297423 1297ms
+2014-10-02T11:08:12.244+0800 [conn1] command test2.$cmd command: insert { insert: "test_coll", documents: [ { _id: ObjectId('542cc19a8b4684aaa07a0f28'), a: "hello" } ], ordered: true } keyUpdates:0 numYields:0 locks(micros) w:453 reslen:40 1298ms
+2014-10-02T11:38:48.704+0800 [conn5] build index on: iii2.test_remove_speed properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.test_remove_speed" }
+2014-10-02T11:38:48.752+0800 [conn5] 	 added index to empty collection
+2014-10-02T11:39:13.882+0800 [conn5] insert iii2.test_remove_speed query: { _id: ObjectId('542cc8e172829e285860f1ce'), foo: "bar", bar: 59764.0, z: -59754.0 } ninserted:1 keyUpdates:0 numYields:0 locks(micros) w:187701 187ms
+2014-10-02T11:39:13.882+0800 [conn5] command iii2.$cmd command: insert { insert: "test_remove_speed", documents: [ { _id: ObjectId('542cc8e172829e285860f1ce'), foo: "bar", bar: 59764.0, z: -59754.0 } ], ordered: true } keyUpdates:0 numYields:0 locks(micros) w:316 reslen:40 188ms
+2014-10-02T11:40:20.649+0800 [conn6] build index on: iii2.test_remove_speed properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.test_remove_speed" }
+2014-10-02T11:40:20.650+0800 [conn6] 	 added index to empty collection
+2014-10-02T11:41:05.656+0800 [conn6] remove iii2.test_remove_speed ndeleted:99999 keyUpdates:0 numYields:24 locks(micros) w:1902420 1232ms
+2014-10-02T11:41:05.656+0800 [conn6] command iii2.$cmd command: delete { delete: "test_remove_speed", deletes: [ { q: {}, limit: 0.0 } ], ordered: true } keyUpdates:0 numYields:0  reslen:40 1233ms
+2014-10-02T11:41:15.956+0800 [conn6] insert iii2.test_remove_speed query: { _id: ObjectId('542cc95bf65d82ec0c48533f'), foo: "bar", bar: 23152.0, z: -23142.0 } ninserted:1 keyUpdates:0 numYields:0 locks(micros) w:175015 175ms
+2014-10-02T11:41:15.957+0800 [conn6] command iii2.$cmd command: insert { insert: "test_remove_speed", documents: [ { _id: ObjectId('542cc95bf65d82ec0c48533f'), foo: "bar", bar: 23152.0, z: -23142.0 } ], ordered: true } keyUpdates:0 numYields:0 locks(micros) w:348 reslen:40 175ms
+2014-10-02T11:41:46.863+0800 [conn6] insert iii2.test_remove_speed query: { _id: ObjectId('542cc97af65d82ec0c493039'), foo: "bar", bar: 79722.0, z: -79712.0 } ninserted:1 keyUpdates:0 numYields:0 locks(micros) w:301875 301ms
+2014-10-02T11:41:46.863+0800 [conn6] command iii2.$cmd command: insert { insert: "test_remove_speed", documents: [ { _id: ObjectId('542cc97af65d82ec0c493039'), foo: "bar", bar: 79722.0, z: -79712.0 } ], ordered: true } keyUpdates:0 numYields:0 locks(micros) w:449 reslen:40 302ms
+2014-10-02T15:49:02.555+0800 [conn7] build index on: iii2.food properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.food" }
+2014-10-02T15:49:02.574+0800 [conn7] 	 added index to empty collection
+2014-10-02T15:49:23.162+0800 [conn8] build index on: iii2.food properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.food" }
+2014-10-02T15:49:23.162+0800 [conn8] 	 added index to empty collection
+2014-10-02T15:49:38.912+0800 [conn9] build index on: iii2.food properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.food" }
+2014-10-02T15:49:38.913+0800 [conn9] 	 added index to empty collection
+2014-10-02T15:50:24.657+0800 [conn10] build index on: iii2.food properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.food" }
+2014-10-02T15:50:24.658+0800 [conn10] 	 added index to empty collection
+2014-10-02T15:55:25.752+0800 [conn11] build index on: iii2.food properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.food" }
+2014-10-02T15:55:25.752+0800 [conn11] 	 added index to empty collection
+2014-10-02T15:55:37.754+0800 [conn12] build index on: iii2.food properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.food" }
+2014-10-02T15:55:37.754+0800 [conn12] 	 added index to empty collection
+2014-10-02T16:08:58.220+0800 [conn13] build index on: iii2.food properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.food" }
+2014-10-02T16:08:58.265+0800 [conn13] 	 added index to empty collection
+2014-10-02T16:09:23.165+0800 [conn14] build index on: iii2.food properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.food" }
+2014-10-02T16:09:23.165+0800 [conn14] 	 added index to empty collection
+2014-10-02T16:09:38.176+0800 [conn15] build index on: iii2.food properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "iii2.food" }
+2014-10-02T16:09:38.176+0800 [conn15] 	 added index to empty collection

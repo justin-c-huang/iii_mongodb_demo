@@ -9,7 +9,7 @@ print("insert end.......");
 
 var doRemove = function(){
 	var start = (new Date()).getTime();
-	db.test_remove_speed.remove();
+	db.test_remove_speed.remove({});
 	db.test_remove_speed.findOne();
 	var timeDiff = (new Date()).getTime() - start;
 	print("Remove took:" + timeDiff + "ms");

@@ -14,10 +14,10 @@ db.food.insert({_id:2,fruit:['apple','kumpuat','orange']});
 db.food.insert({_id:3,fruit:['cherry','banana','apple']});
 db.food.insert({_id:4,fruit:['banana','apple']});
 
-var cursor = db.food.find();
-cursor.forEach(function(x){
-	printjson(x.fruit);
-});
+//var cursor = db.food.find();
+//cursor.forEach(function(x){
+//	printjson(x.fruit);
+//});
 
 //cursor = db.food.find({fruit:'banana'});
 //showCursorItems(cursor);
@@ -32,13 +32,14 @@ cursor = db.food.find({
 	                   	}
                       }
 );
+*/
 
-showCursorItems(cursor);*/
+//showCursorItems(cursor);
 
 //cursor = db.food.find({fruit:{$size:2}});
 //showCursorItems(cursor);
 
-cursor = db.food.find({},{fruit:{$slice:1}});
+cursor = db.food.find({},{fruit:{$slice:2}});
 showCursorItems(cursor);
 
 
@@ -46,7 +47,7 @@ showCursorItems(cursor);
 //showCursorItems(cursor);
 
 
-//cursor = db.food.find({},{fruit:{$slice:[0,1]},_id:0});
+//cursor = db.food.find({},{fruit:{$slice:[0,2]},_id:0});
 //showCursorItems(cursor);
 
 //cursor = db.food.find({},{fruit:{$slice:-1},_id:0});

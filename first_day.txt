@@ -1,0 +1,43 @@
+mongoDB v.s RDB
+collection, document, field
+how to start mongodb
+insert (bulk insert)
+find findOne
+update (4 params)
+remove (remove speed)
+_id format
+Object.bsonsize()
+db.runCommand()
+modifier: 
+  $inc 
+  $set 
+  $unset 
+  $push ($each $slice $sort) 
+  $addToSet
+  $setOnInsert
+save
+write concern (w:1 j:true)
+find() second param
+cursor ->hasNext() next()
+$in 
+$nin
+$or
+$not
+$gte $lte 
+$exists
+array query(fruit)
+  $all
+  $size
+  $slice
+$where
+injection attack  
+
+
+modifier speed(move document)
+
+
+
+
+
+
+

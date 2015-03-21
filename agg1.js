@@ -1,5 +1,5 @@
 
-var db = db.getSisterDB("iii2");
+var db = db.getSisterDB("iii3");
 
 var showCursorItems = function(cursor){
 	while (cursor.hasNext()) {
@@ -17,16 +17,30 @@ var findOneAndShow = function(coll_name){
 	printjson(db[coll_name].findOne());
 }
 
-//findOneAndShow('usersIndex');
+findOneAndShow('usersIndex');
 
 print('--------------------------');
 
+//  var cursor = db.usersIndex.aggregate(
+//          {$match:{age:15}},
+//          {$project:{'NAME':'$username',age:1}},       
+//          {$limit:5}
+        
+//  )
+//  showCursorItems(cursor);
+
 // var cursor = db.usersIndex.aggregate(
-// 		{$match:{age:15}},
-//         {$project:{'NAME':'$username',age:1}},
-//         {$limit:5}
-// )
+// 		{$limit:5},
+//         {$project:{
+//         	       'NAME':'$username',
+//                    'add100Years':{$add:['$age',100]}
+//                    }
+//         },
+        
+//         {$match:{age:15}}
+// );
 // showCursorItems(cursor);
+
 
 
 // var cursor = db.usersIndex.aggregate(

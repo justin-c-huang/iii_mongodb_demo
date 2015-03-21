@@ -5,20 +5,21 @@ var showCursorItems = function(cursor){
 }
 
 var db = db.getSisterDB("iii2");
+db.usersRandom.drop()
+var start = (new Date()).getTime();
 
-// var start = (new Date()).getTime();
+ for(i = 0; i<1000000; i++){
+ 	db.usersRandom.insert(
+ 		{
+ 			i:i,
+ 			username:'user'+i,
+ 			random: Math.random(),
+ 			random2: i/1000000
+ 		}
+ 	);
+ }
 
-//  for(i = 0; i<1000000; i++){
-//  	db.usersRandom.insert(
-//  		{
-//  			i:i,
-//  			username:'user'+i,
-//  			random: Math.random()
-//  		}
-//  	);
-//  }
-
-// print((new Date()).getTime() - start);
+ print((new Date()).getTime() - start);
 
 var useSkipToRandomFindUser = function(){
 	var start = (new Date()).getTime();
@@ -35,10 +36,10 @@ var useGtOrLtToRandomFindUser = function(){
 	var total = db.usersRandom.count();
 	var random = Math.random();
 	print("random:"+random);
-	var result = db.usersRandom.findOne({random:{$gt:random}})
+	var result = db.usersRandom.findOne({random2:{$gt:random}})
 	if(result == null){
 		print("result == null")
-		result = db.usersRandom.findOne({random:{$lt:random}})
+		result = db.usersRandom.findOne({random2:{$lt:random}})
 	}
 	printjson(result);
 	print("use gt or lt:"+  ((new Date()).getTime() - start) + " ms");

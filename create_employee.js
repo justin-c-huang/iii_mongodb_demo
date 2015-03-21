@@ -7,7 +7,7 @@ var emp6 = {name:'Austin',hireDate:new Date('2009/01/15'),salary:80000,bonus:200
 
 
 
-var db = db.getSisterDB("iii2");
+var db = db.getSisterDB("iii3");
 
 db.employee.drop()
 db.employee.insert([emp1,emp2,emp3,emp4,emp5,emp6])
@@ -18,16 +18,16 @@ var showCursorItems = function(cursor){
 	}
 }
 
-// var cursor = db.employee.aggregate({
-// 	$project:{
-// 		name:'$name',
-// 		_id:0,
-// 		totalPay:{
-// 			$add:["$salary","$bonus"]
-// 		}
-// 	}
-// });
-// showCursorItems(cursor);
+var cursor = db.employee.aggregate({
+	$project:{
+		name:'$name',
+		_id:0,
+		totalPay:{
+			$add:["$salary","$bonus"]
+		}
+	}
+});
+showCursorItems(cursor);
 
 
 // var cursor = db.employee.aggregate({

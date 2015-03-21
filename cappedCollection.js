@@ -5,7 +5,7 @@ var showCursorItems = function(cursor){
 	}
 }
 
-var db = db.getSisterDB("iii2");
+var db = db.getSisterDB("iii3");
 
 db.capped_coll.drop();
 
@@ -24,4 +24,4 @@ var cursor = db.capped_coll.find();
 
 showCursorItems(cursor);
 
-printjson(db.capped_coll.stats());
+//printjson(db.capped_coll.stats());

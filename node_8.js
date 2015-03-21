@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/iii2');
+mongoose.connect('mongodb://localhost/iii3');
 
 var kittySchema = mongoose.Schema({
     name: String

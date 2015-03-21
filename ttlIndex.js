@@ -11,7 +11,7 @@ var findAllAndShow = function(coll_name){
     showCursorItems(cursor);
 }
 
-var db = db.getSisterDB("iii2");
+var db = db.getSisterDB("iii3");
 
 db.ttl_coll.drop();
 

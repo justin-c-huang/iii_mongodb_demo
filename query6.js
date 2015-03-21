@@ -5,13 +5,13 @@ var showCursorItems = function(cursor){
 	}
 }
 
-var db = db.getSisterDB("iii2");
+var db = db.getSisterDB("iii3");
 
 db.tmp.drop();
 
 db.tmp.insert({_id:1,x:15});
 
-db.tmp.insert({_id:2,x:25});
+db.tmp.insert({_id:1,x:25});
 
 var err = db.runCommand({getLastError:1});
 printjson(err);

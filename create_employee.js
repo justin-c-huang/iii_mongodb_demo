@@ -9,7 +9,7 @@ var emp6 = {name:'Austin',hireDate:new Date('2009/01/15'),salary:80000,bonus:200
 
 
 
-var db = db.getSisterDB("iii-2015-2");
+var db = db.getSisterDB("iii-2016-8");
 
 db.employee.drop()
 db.employee.insert([emp1,emp2,emp3,emp4,emp5,emp6])

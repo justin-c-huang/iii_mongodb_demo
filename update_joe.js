@@ -1,4 +1,3 @@
-db.users_update.drop();
 
 var showCursorItems = function(cursor){
 	while (cursor.hasNext()) {

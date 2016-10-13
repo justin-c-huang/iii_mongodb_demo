@@ -5,7 +5,7 @@ var showCursorItems = function(cursor){
 	}
 }
 
-var db = db.getSisterDB("iii-2015-3");
+var db = db.getSisterDB("iii-2016-8");
 
 db.inventory.drop();
 
@@ -29,13 +29,17 @@ db.inventory.insert([
 	productH
 ]);
 
+//cursor = db.inventory.find({},{_id:0});
+//showCursorItems(cursor);
 
+
+// print('-------------------------------------------')
 // cursor = db.inventory.find( {$or:[
 // 	                             {quantity:10},
 //                                  {price:10}
 // 	                            ]
 // 	                        },
-// 	                        {_id:0}
+// 	                        {_id:0,level:0}
 // );
 
 // showCursorItems(cursor);
@@ -53,15 +57,15 @@ db.inventory.insert([
 // 	                          	      	   }
 // 	                          	    }
 // 	                        },
-// 	                        {_id:0}
+// 	                        {_id:0,price:1,name:1}
 // );
 // showCursorItems(cursor);
 
 
 
-// print('-------------------------------------------')
-// cursor = db.inventory.find({level:null},{_id:0});
-// showCursorItems(cursor);
+print('-------------------------------------------')
+cursor = db.inventory.find({level:null},{_id:0});
+showCursorItems(cursor);
 
 
 
@@ -82,8 +86,7 @@ showCursorItems(cursor);
 
 
 
-// cursor = db.inventory.find({},{_id:0});
-// showCursorItems(cursor);
+
 
 
 

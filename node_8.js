@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/iii-2015-2');
+mongoose.connect('mongodb://localhost/iii-2016-8');
 
 var kittySchema = mongoose.Schema({
     name: String
@@ -19,10 +19,10 @@ var silence = new Kitten({ name: 'Silence' })
 silence.save(function (err, silence) {
   	if (err) return console.error(err);
   	silence.speak();
-  	Kitten.find(function (err, kittens) {
+  	
+    Kitten.find(function (err, kittens) {
   		if (err) return console.error(err);
   		console.log(kittens)
   		mongoose.disconnect();
 	})
 });
-

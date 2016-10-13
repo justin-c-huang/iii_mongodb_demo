@@ -12,7 +12,7 @@ var emp4 = {firstName:'Steven',lastName:'chen',hireDate:new Date('2010/05/15'),s
 var emp5 = {firstName:'Joe',lastName:'Yang',hireDate:new Date('2013/09/15'),salary:50000,bonus:10000, '401k':2000}
 var emp6 = {firstName:'Austin',lastName:'Cheng',hireDate:new Date('2009/01/15'),salary:80000,bonus:20000, '401k':3000}
 
-var db = db.getSisterDB("iii-2015-2");
+var db = db.getSisterDB("iii-2016-8");
 
 db.employee.drop()
 db.employee.insert([emp1,emp2,emp3,emp4,emp5,emp6])
@@ -68,14 +68,15 @@ var showCursorItems = function(cursor){
 
 var cursor = db.employee.aggregate({
 	$project:{
-		name:'$firstName',
+		fname:'$firstName',
+        lname:'$lastName',
 		_id:0,
 		email:{
 			$concat:[
 				{$substr:['$firstName',0,2]},
 				".",
 				"$lastName",
-				"@example.com"
+				"@vpon.com"
 			]
 			
 		}

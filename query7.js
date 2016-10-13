@@ -5,7 +5,7 @@ var showCursorItems = function(cursor){
 	}
 }
 
-var db = db.getSisterDB("iii-2015-3");
+var db = db.getSisterDB("iii-2016-8");
 
 //db.usersNonIndex.drop();
 
@@ -27,8 +27,9 @@ var db = db.getSisterDB("iii-2015-3");
 
 
 //db.usersNonIndex.ensureIndex({username:1})
-//db.usersNonIndex.ensureIndex({age:1,username:1})
-//db.usersNonIndex.ensureIndex({username:1,age:1})
+
+db.usersNonIndex.ensureIndex({age:1,username:1})
+db.usersNonIndex.ensureIndex({username:1,age:1})
 
 
 
@@ -42,59 +43,62 @@ var db = db.getSisterDB("iii-2015-3");
 // printjson(explainObj2.executionStats)
 
 
-//var explainObj = db.users.find({"_id" : ObjectId("539c05971a3a5b2299d862e3")}).explain("executionStats");
-//printjson(explainObj.executionStats)
+// var explainObj = db.users.find({"_id" : ObjectId("539c05971a3a5b2299d862e3")}).explain("executionStats");
+// printjson(explainObj.executionStats)
 
 // var explainObj = db.usersNonIndex.find({})
-// 	.limit(100000)
+// 	//.limit(100000)
 // 	.sort({age:1,username: 1})
+// 	.hint({$natural:1})
 // 	//.hint({username:1,age:1})
-// 	.hint({age:1,username:1})
+// 	//.hint({age:1,username:1})
 //  	.explain("executionStats");
 
 // printjson(explainObj.executionStats);
 
 
+// var explainObj1 = db.usersNonIndex.find({
+// 	 "age" : {"$gte" : 21, "$lte" : 50}
+// 	})
+// 	.sort({"username" : 1})
+// 	//.hint({username:1,age:1})
+// 	//.hint({age:1,username:1})
+// 	.hint({$natural:1})
+//  	.explain("executionStats");
+
+// printjson(explainObj1.executionStats);
+
 
 
 var explainObj1 = db.usersNonIndex.find({
-	 "age" : {"$gte" : 21, "$lte" : 30}
+	 "age" : {"$gte" : 21, "$lte" : 50}
 	})
 	.sort({"username" : 1})
-	.limit(10000)
+	.limit(10)
 	.hint({age:1,username:1})
  	.explain("executionStats");
 
 print('use age_username index spend:'+explainObj1.executionStats.executionTimeMillis+'ms');
 
 var explainObj2 = db.usersNonIndex.find({
-	 "age" : {"$gte" : 21, "$lte" : 30}
+	 "age" : {"$gte" : 21, "$lte" : 50}
 	})
 	.sort({"username" : 1})
-	.limit(10000)
+	.limit(10)
 	.hint({username:1,age:1})
  	.explain("executionStats");
 
 print('use username_age index spend:'+explainObj2.executionStats.executionTimeMillis+'ms');
 
-// var explainObj3 = db.usersNonIndex.find({
-// 	 "age" : {"$gte" : 21, "$lte" : 30}
-// 	})
-// 	.sort({"username" : 1})
-// 	.limit(10000)
-// 	.hint({$natural:1})
-//  	.explain("executionStats");
+var explainObj3 = db.usersNonIndex.find({
+	 "age" : {"$gte" : 21, "$lte" : 50}
+	})
+	.sort({"username" : 1})
+	.limit(10)
+	.hint({$natural:1})
+ 	.explain("executionStats");
 
-// print('use natural spend:'+explainObj3.executionStats.executionTimeMillis+'ms');
-
-
-
-
-
-
-//var explainObj = db.usersNonIndex.find({username:'user101'}).limit(1).explain("executionStats");
-//var explainObj = db.usersNonIndex.find({username:'user999999'}).limit(1).explain("executionStats");
-//printjson(explainObj.executionStats);
+print('use natural spend:'+explainObj3.executionStats.executionTimeMillis+'ms');
 
 
 

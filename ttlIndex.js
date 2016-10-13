@@ -11,18 +11,18 @@ var findAllAndShow = function(coll_name){
     showCursorItems(cursor);
 }
 
-var db = db.getSisterDB("iii-2015-3");
+var db = db.getSisterDB("iii-2016-8");
 
 // db.ttl_coll.drop();
 
-// db.ttl_coll.ensureIndex({lastUpdated:1},{expireAfterSeconds:10})
+db.ttl_coll.ensureIndex({lastUpdated:1},{expireAfterSeconds:10})
 
-// for(i = 0; i < 10 ; i++){
-// 	db.ttl_coll.insert({x:i,lastUpdated:new Date()})
-// }
+for(i = 0; i < 10 ; i++){
+	db.ttl_coll.insert({x:i,lastUpdated:new Date()})
+}
 
 findAllAndShow('ttl_coll');
 
 
 
-//printjson(db.ttl_coll.stats());
+

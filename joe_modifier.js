@@ -1,3 +1,4 @@
+db = connect("localhost:27017/iii-2016-8");
 db.users_modifier.drop();
 
 var showCursorItems = function(cursor){

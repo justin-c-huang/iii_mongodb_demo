@@ -23,8 +23,32 @@ db.scores.drop()
 
 db.scores.insert([s1,s2,s3,s4,s5,s6,s7,s8,s9,s10])
 
+var cursor = db.scores.aggregate({
+	$group:{
+		_id:'$grade',
+		lowestScore:{$min:'$score'},
+		highestScore:{$max:'$score'}
+	}
+}
+,{
+	$sort:{_id:1}
+}
+);
 
+showCursorItems(cursor);
 
+print('-----------------------------');
+var cursor = db.scores.aggregate(
+{
+	$sort:{score:1}
+},
+{
+	$group:{
+		_id:'$grade',
+		'lowestScore':{$first:'$score'},
+		'highestScore':{$last:'$score'}
+	}
+}
+)
 
-
-
+showCursorItems(cursor);

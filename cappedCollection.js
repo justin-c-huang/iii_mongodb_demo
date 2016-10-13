@@ -5,7 +5,7 @@ var showCursorItems = function(cursor){
 	}
 }
 
-var db = db.getSisterDB("iii-2015-3");
+var db = db.getSisterDB("iii-2016-8");
 
 db.capped_coll.drop();
 
@@ -13,10 +13,10 @@ db.createCollection('capped_coll',
 	{
 		capped:true,
 		size:20000, //maximum size in bytes for a capped collection.
-		max:5 //maximum number of documents  
+		max:10 //maximum number of documents  
 	}
 );
-for(i = 0; i < 7 ; i++){
+for(i = 0; i < 100 ; i++){
 	db.capped_coll.insert({x:i})
 }
 

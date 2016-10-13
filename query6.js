@@ -5,16 +5,18 @@ var showCursorItems = function(cursor){
 	}
 }
 
-var db = db.getSisterDB("iii-2015-3");
+var db = db.getSisterDB("iii-2016-8");
 
 db.tmp.drop();
 
 db.tmp.insert({_id:1,x:15});
-
 db.tmp.insert({_id:1,x:25});
 
-var err = db.runCommand({getLastError:1});
-printjson(err);
+var ResultErr = db.runCommand({getLastError:1});
+if(ResultErr.err){
+	printjson(ResultErr);
+}
+
 
 
 

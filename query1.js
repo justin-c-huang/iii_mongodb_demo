@@ -1,4 +1,4 @@
-db = connect("localhost:27017/iii-2015-3");
+db = connect("localhost:27017/iii-2016-8");
 
 var showCursorItems = function(cursor){
 	while (cursor.hasNext()) {
@@ -6,8 +6,6 @@ var showCursorItems = function(cursor){
 	}
 }
 
-//var db = db.getSisterDB("iii-2015-3");
-//var db = db.getSiblingDB("iii3");
 
 db.iiiCollection.drop();
 
@@ -16,13 +14,14 @@ for(var i = 0; i < 100; i++){
 }
 
 
-// cursor = db.iiiCollection.find({},{age:1,_id:0});
+// cursor = db.iiiCollection.find({},{name:1,age:1});
 // showCursorItems(cursor);
 
 
 // print('------------between the ages of 18 and 30-----------------');
 
-// cursor = db.iiiCollection.find({age:{$gte:18, $lte:30}},{name:1,age:1,_id:0});
+// cursor = db.iiiCollection.find({age:{$gt:18, $lt:30}},
+// 	                           {name:1,age:1,_id:0});
 // showCursorItems(cursor);
 
 

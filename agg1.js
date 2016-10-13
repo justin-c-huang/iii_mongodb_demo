@@ -1,5 +1,5 @@
 
-var db = db.getSisterDB("iii3");
+var db = db.getSisterDB("iii-2015-3");
 
 var showCursorItems = function(cursor){
 	while (cursor.hasNext()) {
@@ -17,51 +17,36 @@ var findOneAndShow = function(coll_name){
 	printjson(db[coll_name].findOne());
 }
 
-findOneAndShow('usersIndex');
+findOneAndShow('usersNonIndex');
 
 print('--------------------------');
 
-//  var cursor = db.usersIndex.aggregate(
-//          {$match:{age:15}},
-//          {$project:{'NAME':'$username',age:1}},       
-//          {$limit:5}
-        
-//  )
-//  showCursorItems(cursor);
 
-// var cursor = db.usersIndex.aggregate(
+var cursor = db.usersNonIndex.aggregate(
+         {$match:{age:15}},
+         {$project:{'NAME':'$username',age:1,_id:0}},       
+         {$limit:5}        
+)
+showCursorItems(cursor);
+
+// var cursor = db.usersNonIndex.aggregate(
+// 		{$match:{age:15}},
 // 		{$limit:5},
 //         {$project:{
 //         	       'NAME':'$username',
 //                    'add100Years':{$add:['$age',100]}
 //                    }
-//         },
-        
-//         {$match:{age:15}}
+//         }
 // );
 // showCursorItems(cursor);
 
-
-
-// var cursor = db.usersIndex.aggregate(
-// 		{$match:{age:15}},
-//         {$project:{
-//         	       'NAME':'$username',
-//                    'add100Years':{$add:['$age',100]}
-//                    }
-//         },
-//         {$limit:5}
-// );
+// var cursor = db.usersNonIndex.aggregate(
+// 				{
+// 					$group:{_id:'$age', count : { $sum : 1 }}
+// 				},
+// 				{$sort:{'_id':1}}
+// )
 // showCursorItems(cursor);
-
-
-var cursor = db.usersIndex.aggregate(
-				{
-					$group:{_id:'$age', count : { $sum : 1 }}
-				},
-				{$sort:{'_id':1}}
-)
-showCursorItems(cursor);
 
 
 

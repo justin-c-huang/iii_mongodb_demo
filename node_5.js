@@ -3,7 +3,7 @@ var util = require('util')
 var host = 'localhost';
 var port = mongo.Connection.DEFAULT_PORT; //27017
 var server = new mongo.Server(host,port,{auto_reconnect:true});
-var db = new mongo.Db('iii3',server,{safe:true})
+var db = new mongo.Db('iii-2015-2',server,{safe:true})
 
 var product1 = {type:'book1',price:10}
 var product2 = {type:'food1',price:20}

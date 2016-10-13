@@ -1,5 +1,5 @@
 
-var db = db.getSisterDB("iii3");
+var db = db.getSisterDB("iii-2015-2");
 
 var showCursorItems = function(cursor){
 	while (cursor.hasNext()) {

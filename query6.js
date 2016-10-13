@@ -5,7 +5,7 @@ var showCursorItems = function(cursor){
 	}
 }
 
-var db = db.getSisterDB("iii3");
+var db = db.getSisterDB("iii-2015-3");
 
 db.tmp.drop();
 
